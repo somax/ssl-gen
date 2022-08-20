@@ -1,6 +1,6 @@
 .DS_Store
-.conf
-.passwd
+*.conf
+*.passwd
 .srl
-v3.ext
+*.ext
 */
