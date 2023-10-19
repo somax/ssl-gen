@@ -31,7 +31,7 @@ conf(){
         echo "...文件已存在, 跳过"
     else
         cat << EOF | tee $CONF_FILE
-DOMAIN="$NAMESPACE.com"
+DOMAIN="$NAMESPACE"
 SUBJ_C="CN"
 SUBJ_ST="ST"
 SUBJ_L="L"
@@ -53,9 +53,9 @@ basicConstraints=CA:FALSE
 keyUsage=digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment
 subjectAltName=@alt_names
 [alt_names]
-DNS.1 = $NAMESPACE.com
-DNS.2 = *.$NAMESPACE.com
-IP.1 = 10.0.0.1
+DNS.1 = $NAMESPACE
+DNS.2 = *.$NAMESPACE
+IP.1 = 127.0.0.1
 EOF
     fi
 
